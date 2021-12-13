@@ -9,16 +9,16 @@ minNamespaceDuration: 60d
 assemblies: 'api, dual, peer'
 harvestBeneficiaryPercentage: 15
 batchVerificationRandomSource: /dev/urandom
-currencyMosaicId: 24F5C1B43D0F8A21
-harvestingMosaicId: 24F5C1B43D0F8A21
+currencyMosaicId: 4D75FC4741190AEF
+harvestingMosaicId: 4D75FC4741190AEF
 baseNamespace: twix
 votingSetGrouping: 1440
 maxSecretLockDuration: 365d
 maxNamespaceDuration: 730d
 namespaceGracePeriodDuration: 60d
 blockGenerationTargetTime: 30s
-nemesisGenerationHashSeed: A7E24C0A42627149D3B2EF88BA957307720DF7D2E8266FEF78AD62049C7E9517
-nemesisSignerPublicKey: 95D45486BCE44D9AA9803D7A28E0ACCF2638E84426B045008B0A176B69A141D7
+nemesisGenerationHashSeed: EF129F95C4D7A838E03E8B36AD202C52737C8AC26DBCD22710B0D1A6B3280509
+nemesisSignerPublicKey: 0AADF902CBA23DD1CA120DAF98F6EB42EAE17A71FEC99AAF3585747A15DA32EB
 sinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
 harvestNetworkFeeSinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
 mosaicRentalFeeSinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
@@ -38,18 +38,18 @@ inflation:
     starting-at-height-10000: 0
 knownPeers:
     api-node:
-        - publicKey: 63E3E19DB9D8F7D1E3E7BD64EC896F98530D4CB726A14148D729C1148E165271
+        - publicKey: 6237263D3E53FF84B016A1CCE6D7C6D977F8A454A13153CA3C8A52027BEEE0C3
           endpoint:
               host: 159.69.211.60
               port: 7900
           metadata:
-              name: twix-node-1
+              name: api-node-1
               roles: Api,Peer,Voting
     peer-node:
-        - publicKey: 63E3E19DB9D8F7D1E3E7BD64EC896F98530D4CB726A14148D729C1148E165271
+        - publicKey: 50ADF8BE45CFB9023E40F296443DA5C564D06BA218A561813340ECAECE5A53BC
           endpoint:
               host: 159.69.211.60
               port: 7900
           metadata:
-              name: twix-node-1
+              name: peer-node-0
               roles: Api,Peer,Voting
