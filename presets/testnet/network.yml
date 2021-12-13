@@ -19,10 +19,10 @@ namespaceGracePeriodDuration: 60d
 blockGenerationTargetTime: 30s
 nemesisGenerationHashSeed: EF129F95C4D7A838E03E8B36AD202C52737C8AC26DBCD22710B0D1A6B3280509
 nemesisSignerPublicKey: 0AADF902CBA23DD1CA120DAF98F6EB42EAE17A71FEC99AAF3585747A15DA32EB
-sinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
-harvestNetworkFeeSinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
-mosaicRentalFeeSinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
-namespaceRentalFeeSinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
+sinkAddress: TCB336N37DYJXD7UWNHYF6ISEZYZVW5FRH7TE2A
+harvestNetworkFeeSinkAddress: TCB336N37DYJXD7UWNHYF6ISEZYZVW5FRH7TE2A
+mosaicRentalFeeSinkAddress: TCB336N37DYJXD7UWNHYF6ISEZYZVW5FRH7TE2A
+namespaceRentalFeeSinkAddress: TCB336N37DYJXD7UWNHYF6ISEZYZVW5FRH7TE2A
 faucetUrl: ''
 #symbolServerToolsImage: symbolplatform/symbol-server:tools-gcc-1.0.0.0
 #symbolServerImage: symbolplatform/symbol-server:gcc-1.0.0.0
@@ -38,7 +38,7 @@ inflation:
     starting-at-height-10000: 0
 knownPeers:
     api-node:
-        - publicKey: 6237263D3E53FF84B016A1CCE6D7C6D977F8A454A13153CA3C8A52027BEEE0C3
+        - publicKey: 5EFCB6E800495B0E387BBAE8200715946B89D75AE4C05FDE4E4497767B9862DA
           endpoint:
               host: 159.69.211.60
               port: 7900
@@ -46,7 +46,7 @@ knownPeers:
               name: api-node-1
               roles: Api,Peer,Voting
     peer-node:
-        - publicKey: 50ADF8BE45CFB9023E40F296443DA5C564D06BA218A561813340ECAECE5A53BC
+        - publicKey: 5EFCB6E800495B0E387BBAE8200715946B89D75AE4C05FDE4E4497767B9862DA
           endpoint:
               host: 159.69.211.60
               port: 7900
