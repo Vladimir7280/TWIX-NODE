@@ -149,6 +149,23 @@ config-harvesting.properties: {}
 Property:
     type: Type
     description: Description
+# price.plugin ->
+initialSupply:
+    type: uint64_t
+    description: Description
+pricePublisherAddress:
+    type: string
+    description: Description
+feeRecalculationFrequency:
+    type: uint64_t
+    description: Description
+multiplierRecalculationFrequency:
+    type: uint64_t
+    description: Description
+pricePeriodBlocks:
+    type: uint64_t
+    description: Description
+# <- price.plugin 
 harvesterSigningPrivateKey:
     type: string
     description: Harvester signing private key.

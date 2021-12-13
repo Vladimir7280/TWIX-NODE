@@ -5,16 +5,23 @@
   },
 
   "port": 3000,
-  "protocol": "{{{restProtocol}}}",
-  "sslKeyPath": "{{{restSSLPath}}}/{{{restSSLKeyFileName}}}",
-  "sslCertificatePath": "{{{restSSLPath}}}/{{{restSSLCertificateFileName}}}",
-
   "crossDomain": {
     "allowedHosts": ["*"],
     "allowedMethods": ["GET", "POST", "PUT", "OPTIONS"]
   },
-  "uncirculatingAccountPublicKeys": {{{toJson (splitCsv restUncirculatingAccountPublicKeys)}}},
-  "extensions": {{{toJson (splitCsv restExtensions)}}},
+  "extensions": [
+    "accountLink",
+    "aggregate",
+    "lockHash",
+    "lockSecret",
+    "mosaic",
+    "metadata",
+    "multisig",
+    "namespace",
+    "receipts",
+    "restrictions",
+    "transfer"
+  ],
   "db": {
     "url": "mongodb://{{{databaseHost}}}:27017/",
     "name": "catapult",
@@ -72,11 +79,5 @@
     }
   },
 
-  "numBlocksTransactionFeeStats": 300,
-
-  "deployment": {
-    "deploymentTool": "{{{restDeploymentTool}}}",
-    "deploymentToolVersion": "{{{restDeploymentToolVersion}}}",
-    "lastUpdatedDate": "{{{restDeploymentToolLastUpdatedDate}}}"
-  }
+  "numBlocksTransactionFeeStats": 300
 }

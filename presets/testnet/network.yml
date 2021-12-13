@@ -1,78 +1,55 @@
-initialCurrencyAtomicUnits: 1000000000000000
-maxMosaicAtomicUnits: 100000000000000000
-totalChainImportance: 1000000000000000
-minHarvesterBalance: 10000000000
-maxHarvesterBalance: 1000000000000000
-minVoterBalance: 100000000000000
-networkType: 104
+initialCurrencyAtomicUnits: 9000000000000000
+maxMosaicAtomicUnits: 900000000000000000
+totalChainImportance: 9000000000000000
+minHarvesterBalance: 500
+maxHarvesterBalance: 9000000000000000
+minVoterBalance: 2000
+networkType: 152
 minNamespaceDuration: 60d
 assemblies: 'api, dual, peer'
 harvestBeneficiaryPercentage: 15
 batchVerificationRandomSource: /dev/urandom
-currencyMosaicId: 7831128EAA6516FC
-harvestingMosaicId: 7831128EAA6516FC
+currencyMosaicId: 24F5C1B43D0F8A21
+harvestingMosaicId: 24F5C1B43D0F8A21
 baseNamespace: twix
 votingSetGrouping: 1440
 maxSecretLockDuration: 365d
 maxNamespaceDuration: 730d
 namespaceGracePeriodDuration: 60d
 blockGenerationTargetTime: 30s
-nemesisGenerationHashSeed: 9249D4D090E32363E1817F737EDDE828184CFA95DA084A94C6CD59053CDDB19E
-nemesisSignerPublicKey: A632F899F609B96FCE5B6954E5D4A768D30C41EAA97962E509883FCC2E7AD5AC
-sinkAddress: NAOJ3CGGRY7PEPWEF3VKTCXZFWMROL3ZT7LPOJA
-harvestNetworkFeeSinkAddress: NB4PLU35H5FYRS2R3SOSFIOH3NQB5A3EW6H4NRA
-mosaicRentalFeeSinkAddress: ND57MF36EK7EVMIL3DYGQLDAXT6G6SHMRHLP7MI
-namespaceRentalFeeSinkAddress: NCQK5IGKFIP4AMDJPXBWWSORCFHGU5LGZNA6CEI
+nemesisGenerationHashSeed: A7E24C0A42627149D3B2EF88BA957307720DF7D2E8266FEF78AD62049C7E9517
+nemesisSignerPublicKey: 95D45486BCE44D9AA9803D7A28E0ACCF2638E84426B045008B0A176B69A141D7
+sinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
+harvestNetworkFeeSinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
+mosaicRentalFeeSinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
+namespaceRentalFeeSinkAddress: TCULI3S6II3U22IRZP4UXAKA474XLJVGYDKHDRY
 faucetUrl: ''
-symbolServerToolsImage: symbolplatform/symbol-server:tools-gcc-1.0.0.0
-symbolServerImage: symbolplatform/symbol-server:gcc-1.0.0.0
+#symbolServerToolsImage: symbolplatform/symbol-server:tools-gcc-1.0.0.0
+#symbolServerImage: symbolplatform/symbol-server:gcc-1.0.0.0
 minPartnerNodeVersion: 1.0.0.0
 maxPartnerNodeVersion: 1.0.255.255
-serverVersion: 1.0.0.0
+serverVersion: 1.0.3.1
 knownRestGateways:
-    - 'http://20.52.157.15:3000'
-    - 'http://20.52.233.206:3000'
+    - 'http://159.69.211.60:3000'
 
 trustedHosts:
 inflation:
-    starting-at-height-1: 100000000
-    starting-at-height-800000000: 0
+    starting-at-height-1: 0
+    starting-at-height-10000: 0
 knownPeers:
     api-node:
-        - publicKey: 340863d0434abc7c15cc3ef8c9e01d3478f10481d0f30f32d86b4320eeb2b541
+        - publicKey: 63E3E19DB9D8F7D1E3E7BD64EC896F98530D4CB726A14148D729C1148E165271
           endpoint:
-              host: 20.52.157.15
+              host: 159.69.211.60
               port: 7900
           metadata:
-              name: TWIX-testnet-dual1
-              roles: Api,Peer,Voting
-        - publicKey: bd04709b3ebf7525fee2a2c45c066a52b4bf44f3244fafbf5703ee1a5d0c0423
-          endpoint:
-              host: 20.52.233.206
-              port: 7900
-          metadata:
-              name: TWIX-testnet-dual2
+              name: twix-node-1
               roles: Api,Peer,Voting
     peer-node:
-        - publicKey: fda4ddeab86bbfa4262afa81850c5f2a2c41e55c5fafa90ddbb32a6c5ea425e2
+        - publicKey: 63E3E19DB9D8F7D1E3E7BD64EC896F98530D4CB726A14148D729C1148E165271
           endpoint:
-              host: 20.52.131.91
+              host: 159.69.211.60
               port: 7900
           metadata:
-              name: TWIX-testnet-peer1
-              roles: Peer,Voting
-        - publicKey: 340863d0434abc7c15cc3ef8c9e01d3478f10481d0f30f32d86b4320eeb2b541
-          endpoint:
-              host: 20.52.157.15
-              port: 7900
-          metadata:
-              name: TWIX-testnet-dual1
+              name: twix-node-1
               roles: Api,Peer,Voting
-        - publicKey: bd04709b3ebf7525fee2a2c45c066a52b4bf44f3244fafbf5703ee1a5d0c0423
-          endpoint:
-              host: 20.52.233.206
-              port: 7900
-          metadata:
-              name: TWIX-testnet-dual2
-              roles: Api,Peer,Voting
-

@@ -43,6 +43,7 @@ maxVotingKeyLifetime = {{{maxVotingKeyLifetime}}}
 harvestBeneficiaryPercentage = {{{harvestBeneficiaryPercentage}}}
 harvestNetworkPercentage = {{{harvestNetworkPercentage}}}
 harvestNetworkFeeSinkAddress = {{{harvestNetworkFeeSinkAddress}}}
+harvestNetworkFeeSinkAddressV1 = {{{harvestNetworkFeeSinkAddress}}}
 
 maxTransactionsPerBlock = {{{toAmount maxTransactionsPerBlock}}}
 
@@ -83,6 +84,7 @@ maxMosaicDuration = {{{maxMosaicDuration}}}
 maxMosaicDivisibility = {{{maxMosaicDivisibility}}}
 
 mosaicRentalFeeSinkAddress = {{{mosaicRentalFeeSinkAddress}}}
+mosaicRentalFeeSinkAddressV1 = {{{mosaicRentalFeeSinkAddress}}}
 mosaicRentalFee = {{{toAmount mosaicRentalFee}}}
 
 [plugin:catapult.plugins.multisig]
@@ -104,6 +106,7 @@ namespaceGracePeriodDuration = {{{namespaceGracePeriodDuration}}}
 reservedRootNamespaceNames = {{{reservedRootNamespaceNames}}}
 
 namespaceRentalFeeSinkAddress = {{{namespaceRentalFeeSinkAddress}}}
+namespaceRentalFeeSinkAddressV1 = {{{namespaceRentalFeeSinkAddress}}}
 rootNamespaceRentalFeePerBlock = {{{rootNamespaceRentalFeePerBlock}}}
 childNamespaceRentalFee = {{{toAmount childNamespaceRentalFee}}}
 
@@ -118,3 +121,25 @@ maxMosaicRestrictionValues = {{{maxMosaicRestrictionValues}}}
 [plugin:catapult.plugins.transfer]
 
 maxMessageSize = {{{maxMessageSize}}}
+
+# price.plugin ->
+[plugin:catapult.plugins.price]
+
+initialSupply = {{{initialSupply}}}
+pricePublisherPublicKey = {{{pricePublisherPublicKey}}}
+feeRecalculationFrequency = {{{feeRecalculationFrequency}}}
+multiplierRecalculationFrequency = {{{multiplierRecalculationFrequency}}}
+pricePeriodBlocks = {{{pricePeriodBlocks}}}
+
+# <- price.plugin 
+
+[fork_heights]
+
+totalVotingBalanceCalculationFix = 0
+treasuryReissuance = 0
+
+[treasury_reissuance_transaction_signatures]
+
+{{#each treasuryReissuanceTransactionSignatures}}
+{{this}} = true
+{{/each}}

@@ -378,7 +378,12 @@ export class BootstrapUtils {
                         if (isMustache) {
                             const template = await BootstrapUtils.readTextFile(fromPath);
                             const renderedTemplate = this.runTemplate(template, templateContext);
-                            await fsPromises.writeFile(destinationFile, renderedTemplate);
+                            await fsPromises.writeFile(
+                                destinationFile,
+                                destinationFile.toLowerCase().endsWith('.json')
+                                    ? BootstrapUtils.formatJson(renderedTemplate)
+                                    : renderedTemplate,
+                            );
                         } else {
                             await fsPromises.copyFile(fromPath, destinationFile);
                         }
@@ -390,6 +395,21 @@ export class BootstrapUtils {
                 }
             }),
         );
+    }
+
+    public static async chmodRecursive(path: string, mode: string | number): Promise<void> {
+        // Loop through all the files in the config folder
+        const stat = await fsPromises.stat(path);
+        if (stat.isFile()) {
+            await fsPromises.chmod(path, mode);
+        } else if (stat.isDirectory()) {
+            const files = await fsPromises.readdir(path);
+            await Promise.all(
+                files.map(async (file: string) => {
+                    await this.chmodRecursive(join(path, file), mode);
+                }),
+            );
+        }
     }
 
     // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
@@ -610,6 +630,7 @@ export class BootstrapUtils {
         Handlebars.registerHelper('toSimpleHex', BootstrapUtils.toSimpleHex);
         Handlebars.registerHelper('toSeconds', BootstrapUtils.toSeconds);
         Handlebars.registerHelper('toJson', BootstrapUtils.toJson);
+        Handlebars.registerHelper('splitCsv', BootstrapUtils.splitCsv);
         Handlebars.registerHelper('add', BootstrapUtils.add);
         Handlebars.registerHelper('minus', BootstrapUtils.minus);
         Handlebars.registerHelper('computerMemory', BootstrapUtils.computerMemory);
@@ -660,6 +681,22 @@ export class BootstrapUtils {
         return JSON.stringify(object, null, 2);
     }
 
+    public static formatJson(string: string): string {
+        // Validates and format the json string.
+        try {
+            return JSON.stringify(JSON.parse(string), null, 2);
+        } catch (e) {
+            throw new Error(`${e.message}:JSON\n ${string}`);
+        }
+    }
+
+    public static splitCsv(object: string): string[] {
+        return (object || '')
+            .split(',')
+            .map((string) => string.trim())
+            .filter((string) => string);
+    }
+
     public static toSeconds(serverDuration: string): number {
         return DtoMapping.parseServerDuration(serverDuration).seconds();
     }
@@ -695,9 +732,9 @@ export class BootstrapUtils {
     public static getNetworkIdentifier(networkType: NetworkType): string {
         switch (networkType) {
             case NetworkType.MAIN_NET:
-                return 'public';
+                return 'mainet';
             case NetworkType.TEST_NET:
-                return 'public-test';
+                return 'testnet';
             case NetworkType.MIJIN:
                 return 'mijin';
             case NetworkType.MIJIN_TEST:
@@ -713,9 +750,9 @@ export class BootstrapUtils {
     public static getNetworkName(networkType: NetworkType): string {
         switch (networkType) {
             case NetworkType.MAIN_NET:
-                return 'public';
+                return 'mainet';
             case NetworkType.TEST_NET:
-                return 'publicTest';
+                return 'testnet';
             case NetworkType.MIJIN:
                 return 'mijin';
             case NetworkType.MIJIN_TEST:
