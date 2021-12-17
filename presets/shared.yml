@@ -186,6 +186,8 @@ maxReadRateMonitoringTotalSize: 100MB
 minTransactionFailuresCountForBan: 8
 minTransactionFailuresPercentForBan: 10
 
+friendlyName: twix-node-2
+
 #Rocksdb
 enableStatistics: false
 maxOpenFiles: 0

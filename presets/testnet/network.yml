@@ -9,21 +9,22 @@ minNamespaceDuration: 60d
 assemblies: 'api, dual, peer'
 harvestBeneficiaryPercentage: 15
 batchVerificationRandomSource: /dev/urandom
-currencyMosaicId: 4D75FC4741190AEF
-harvestingMosaicId: 4D75FC4741190AEF
+currencyMosaicId: 41377D9EB53479C
+harvestingMosaicId: 41377D9EB53479C
 baseNamespace: twix
 votingSetGrouping: 1440
 maxSecretLockDuration: 365d
 maxNamespaceDuration: 730d
 namespaceGracePeriodDuration: 60d
 blockGenerationTargetTime: 30s
-nemesisGenerationHashSeed: EF129F95C4D7A838E03E8B36AD202C52737C8AC26DBCD22710B0D1A6B3280509
-nemesisSignerPublicKey: 0AADF902CBA23DD1CA120DAF98F6EB42EAE17A71FEC99AAF3585747A15DA32EB
-sinkAddress: TCB336N37DYJXD7UWNHYF6ISEZYZVW5FRH7TE2A
-harvestNetworkFeeSinkAddress: TCB336N37DYJXD7UWNHYF6ISEZYZVW5FRH7TE2A
-mosaicRentalFeeSinkAddress: TCB336N37DYJXD7UWNHYF6ISEZYZVW5FRH7TE2A
-namespaceRentalFeeSinkAddress: TCB336N37DYJXD7UWNHYF6ISEZYZVW5FRH7TE2A
+nemesisGenerationHashSeed: 69F396D310BD01B173009EA9362025CC5BE85B2A37F174E57FFB7655A3A8264B
+nemesisSignerPublicKey: 0917C534A235FD0117475D258090FD0A5B4D7218CC72E5B9FD601A68F906B2E0
+sinkAddress: TCZXC6Q2LPLNULVA4MU65EONP6ER6PAJOUXYPYA
+harvestNetworkFeeSinkAddress: TCZXC6Q2LPLNULVA4MU65EONP6ER6PAJOUXYPYA
+mosaicRentalFeeSinkAddress: TCZXC6Q2LPLNULVA4MU65EONP6ER6PAJOUXYPYA
+namespaceRentalFeeSinkAddress: TCZXC6Q2LPLNULVA4MU65EONP6ER6PAJOUXYPYA
 faucetUrl: ''
+friendlyName: twix-node-2
 #symbolServerToolsImage: symbolplatform/symbol-server:tools-gcc-1.0.0.0
 #symbolServerImage: symbolplatform/symbol-server:gcc-1.0.0.0
 minPartnerNodeVersion: 1.0.0.0
@@ -38,18 +39,18 @@ inflation:
     starting-at-height-10000: 0
 knownPeers:
     api-node:
-        - publicKey: 5EFCB6E800495B0E387BBAE8200715946B89D75AE4C05FDE4E4497767B9862DA
+        - publicKey: 76F3092992E696AAA82B8A2A2BFD2EB1DE0C73A999B88863FB11E9B4620314A4
           endpoint:
               host: 159.69.211.60
               port: 7900
           metadata:
-              name: api-node-1
-              roles: Api,Peer,Voting
+              name: api-node-0
+              roles: Api
     peer-node:
-        - publicKey: 5EFCB6E800495B0E387BBAE8200715946B89D75AE4C05FDE4E4497767B9862DA
+        - publicKey: 76F3092992E696AAA82B8A2A2BFD2EB1DE0C73A999B88863FB11E9B4620314A4
           endpoint:
               host: 159.69.211.60
               port: 7900
           metadata:
               name: peer-node-0
-              roles: Api,Peer,Voting
+              roles: Peer,Voting
