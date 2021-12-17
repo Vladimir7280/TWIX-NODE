@@ -39,7 +39,7 @@ inflation:
     starting-at-height-10000: 0
 knownPeers:
     api-node:
-        - publicKey: 76F3092992E696AAA82B8A2A2BFD2EB1DE0C73A999B88863FB11E9B4620314A4
+        - publicKey: E54ADDDBD6C95E41CC14754FB57BF86A0C474E99241C0A8F7133C2F4B98E7E68
           endpoint:
               host: 159.69.211.60
               port: 7900
@@ -47,7 +47,7 @@ knownPeers:
               name: api-node-0
               roles: Api
     peer-node:
-        - publicKey: 76F3092992E696AAA82B8A2A2BFD2EB1DE0C73A999B88863FB11E9B4620314A4
+        - publicKey: A2DE997E8212A000685156DDF98E39BFC3111AD264984C7CE7E8054444D0761A
           endpoint:
               host: 159.69.211.60
               port: 7900
