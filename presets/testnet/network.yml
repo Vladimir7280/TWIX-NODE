@@ -45,7 +45,7 @@ knownPeers:
               port: 7900
           metadata:
               name: api-node-0
-              roles: Api
+              roles: Api,Peer,Voting
     peer-node:
         - publicKey: A2DE997E8212A000685156DDF98E39BFC3111AD264984C7CE7E8054444D0761A
           endpoint:
@@ -53,4 +53,4 @@ knownPeers:
               port: 7900
           metadata:
               name: peer-node-0
-              roles: Peer,Voting
+              roles: Api,Peer,Voting
