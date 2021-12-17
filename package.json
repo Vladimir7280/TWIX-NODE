@@ -1,7 +1,7 @@
 {
     "name": "twix-node",
     "description": "TWIX tool that allows you creating, configuring and running TWIX's networks",
-    "version": "1.0.4",
+    "version": "1.0.44",
     "author": "Fernando Boucquez <fboucquez@gmail.com>, SUPERHOW? <info@superhow.io>",
     "bin": {
         "twix-node": "bin/run"
